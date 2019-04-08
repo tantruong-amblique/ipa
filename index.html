@@ -1,10 +1,74 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" >
 
-<body> 
-    <div class="wrapper">
-        <h1>TEst gh-pages</h1>
+<head>
+  <meta charset="UTF-8">
+  <title>VowelsAndConsanants</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="custom-radio d-flex">
+  <div class="inline-div w-50 pr-10">
+    <input class="ipa" id="ipa-v" value="ipa-vowels" name="ipa" type="radio"/>
+    <label for="ipa-v">Vowels</label>
+  </div>
+  <div class="inline-div w-50 pl-10">
+    <input class="ipa" id="ipa-c" value="ipa-consonants" name="ipa" type="radio" />
+    <label for="ipa-c">Consonants</label>
+  </div>
+</div>
+
+<div class="custom-select d-flex">
+  <div class="inline-div w-50 pr-10">
+    <select class="browser-default" id="delay">
+      <option value="1">3</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+      <option value="20">20</option>
+    </select>
+  </div>
+  <div class="custom-checkbox inline-div w-50 pl-10">
+    <label class="control control--checkbox">
+      Random
+      <input id="shuffle" type="checkbox" />
+      <span class="control__indicator"></span>
+    </label>
+  </div>
+</div>
+
+<div class="custom-button d-flex">
+  <button class="bttn" id="vowels-btn">Start</button>
+</div>
+
+<div class="d-flex card">
+  
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <div id="content"></div>
+      </div>
+      <div class="flip-card-back">
+        Content back
+      </div>
     </div>
+  </div>
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
 </body>
 
 </html>

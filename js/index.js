@@ -14,7 +14,7 @@ Array.prototype.shuffle = function () {
   return input;
 };
 
-var classWord = 'vowels';
+var classWord;
 let delay = getDelay();
 let timer = {};
 
@@ -29,6 +29,7 @@ function startIpa() {
 
   if (getIpa() == 'ipa-vowels') {
     ipaArray = [...Array.range(1, 12), '11sub', '12', '13', '13sub', '14', '15', '15sub'];
+    classWord = 'vowels';
   } else {
     ipaArray = Array.range(1, 25);
     classWord = 'consonants';

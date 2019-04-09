@@ -1,3 +1,9 @@
+/* Global */
+body {
+  font-family: 'Oswald', sans-serif;
+  padding: 8px;
+}
+
 /* color */
 .w-50 {
   width: 50%;
@@ -25,8 +31,10 @@
 
 input.ipa:empty {
   margin-left: -999px;
+  display: none;
 }
-input.ipa:empty ~ label {
+
+input.ipa:empty~label {
   position: relative;
   float: left;
   line-height: 2.5em;
@@ -38,7 +46,8 @@ input.ipa:empty ~ label {
   user-select: none;
   color: #d1d3d4;
 }
-input.ipa:empty ~ label:before {
+
+input.ipa:empty~label:before {
   position: absolute;
   display: block;
   top: 0;
@@ -49,30 +58,36 @@ input.ipa:empty ~ label:before {
   background: #d1d3d4;
   border-radius: 3px 0 0 3px;
 }
-input.ipa:hover:not(:checked) ~ label {
+
+input.ipa:hover:not(:checked)~label {
   color: #888;
 }
-input.ipa:hover:not(:checked) ~ label:before {
+
+input.ipa:hover:not(:checked)~label:before {
   content: "\2714";
   text-indent: 0.9em;
   color: #c2c2c2;
 }
-input.ipa:checked ~ label {
+
+input.ipa:checked~label {
   color: #333;
 }
-input.ipa:checked ~ label:before {
+
+input.ipa:checked~label:before {
   content: "\2714";
   text-indent: 0.9em;
   color: #9ce2ae;
   background-color: #4dcb6d;
 }
-input.ipa:focus ~ label:before {
+
+input.ipa:focus~label:before {
   box-shadow: 0 0 0 3px #888;
 }
 
 .custom-select select::-ms-expand {
   display: none;
 }
+
 .custom-select select {
   appearance: none;
   -webkit-appearance: none;
@@ -92,6 +107,7 @@ input.ipa:focus ~ label:before {
   font-size: 14px;
   height: 42px;
 }
+
 .custom-select select:focus {
   border-color: #d1d3d4;
   box-shadow: none;
@@ -100,14 +116,6 @@ input.ipa:focus ~ label:before {
   background-position: calc(100% - 17px) 17px, 100%, calc(100% - 32px) 0;
 }
 
-.custom-checkbox {
-  /* Hover and focus states */
-  /* Checked state */
-  /* Hover state whilst checked */
-  /* Check mark */
-  /* Show check mark */
-  /* Checkbox tick */
-}
 .custom-checkbox .control {
   position: relative;
   padding-left: 54px;
@@ -116,11 +124,13 @@ input.ipa:focus ~ label:before {
   display: flex;
   align-items: center;
 }
+
 .custom-checkbox .control input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
+
 .custom-checkbox .control__indicator {
   position: absolute;
   top: 2px;
@@ -129,28 +139,35 @@ input.ipa:focus ~ label:before {
   height: 40px;
   background: #d1d3d4;
 }
+
 .custom-checkbox .control--radio .control__indicator {
   border-radius: 50%;
 }
-.custom-checkbox .control:hover input ~ .control__indicator,
-.custom-checkbox .control input:focus ~ .control__indicator {
+
+.custom-checkbox .control:hover input~.control__indicator,
+.custom-checkbox .control input:focus~.control__indicator {
   background: #d1d3d4;
 }
-.custom-checkbox .control input:checked ~ .control__indicator {
+
+.custom-checkbox .control input:checked~.control__indicator {
   background: #4dcb6d;
 }
-.custom-checkbox .control:hover input:not([disabled]):checked ~ .control__indicator,
-.custom-checkbox .control input:checked:focus ~ .control__indicator {
+
+.custom-checkbox .control:hover input:not([disabled]):checked~.control__indicator,
+.custom-checkbox .control input:checked:focus~.control__indicator {
   background: #4dcb6d;
 }
+
 .custom-checkbox .control__indicator:after {
   position: absolute;
   display: none;
   content: "";
 }
-.custom-checkbox .control input:checked ~ .control__indicator:after {
+
+.custom-checkbox .control input:checked~.control__indicator:after {
   display: block;
 }
+
 .custom-checkbox .control--checkbox .control__indicator:after {
   top: 50%;
   margin-top: -6px;
@@ -184,14 +201,17 @@ input.ipa:focus ~ label:before {
   -webkit-transition: 0.3s all ease;
   transition: 0.3s ease all;
   cursor: pointer;
+  background: #fff;
 }
-.bttn:hover, .bttn:focus {
+
+.bttn:hover,
+.bttn:focus {
   background: #4dcb6d;
   color: #fff;
 }
 
 /* flip card */
-.ipa {
+.ipa-content {
   height: 100%;
   width: 100%;
   background: #fff;
@@ -199,13 +219,13 @@ input.ipa:focus ~ label:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 80px;
+  font-size: 100px;
 }
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: calc(100vh - 215px);
   perspective: 1000px;
   margin: 0 auto;
   position: relative;

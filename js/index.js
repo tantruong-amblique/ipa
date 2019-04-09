@@ -47,7 +47,7 @@ function startIpa() {
 function runIpa(v, index) {
   timer[index] = setTimeout(() => {
     document.getElementById("content").innerHTML = `
-<span class="ipa ${classWord}-${v.toString()}">${v.toString()}</span>
+<span class="ipa-content ${classWord}-${v.toString()}">${v.toString()}</span>
 `;
   }, delay * index);
 }

@@ -77,3 +77,13 @@ var ipaClass = document.getElementsByClassName("ipa");
 Array.from(ipaClass).forEach(function (element) {
   element.addEventListener('click', getIpa);
 });
+
+(function() {
+  'use strict';
+  document.querySelector('.material-design-hamburger__icon').addEventListener(
+    'click',
+    function() {            
+      document.body.classList.toggle('menu--active');
+      this.parentNode.nextElementSibling.classList.toggle('menu--on');
+    });
+})();

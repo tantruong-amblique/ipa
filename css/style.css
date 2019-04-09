@@ -261,3 +261,110 @@ input.ipa:focus~label:before {
   transform: rotateY(180deg);
   z-index: 1;
 }
+
+/* Vowels Color pallete */
+.vowels-1 {
+  background: #ef6692;
+  color: #fff;
+}
+
+.vowels-2,
+.vowels-3 {
+  background: #e0e00a;
+  color: #000;
+}
+
+.vowels-4,
+.vowels-5,
+.vowels-6 {
+  background: #008000;
+  color: #000;
+}
+
+.vowels-7,
+.vowels-8,
+.vowels-9 {
+  background: #ad0202;
+  color: #fff;
+}
+
+.vowels-10,
+.vowels-11,
+.vowels-11sub {
+  background: #2727bf;
+  color: #fff;
+}
+
+.vowels-12,
+.vowels-13,
+.vowels-13sub {
+  background: #153515;
+  color: #fff;
+}
+
+.vowels-14,
+.vowels-15sub {
+  background: #860086;
+  color: #fff;
+}
+
+/* Consonants color pallete */
+.consonants-1,
+.consonants-2,
+.consonants-3,
+.consonants-4 {
+  background: #008000;
+  color: #000;
+}
+
+.consonants-5,
+.consonants-6 {
+  background: #0bb1e8;
+  color: #fff;
+}
+
+.consonants-7,
+.consonants-8 {
+  background: #860086;
+  color: #fff;
+}
+
+.consonants-9,
+.consonants-10,
+.consonants-11,
+.consonants-12 {
+  background: #e0e00a;
+  color: #000;
+}
+
+.consonants-13,
+.consonants-14,
+.consonants-15,
+.consonants-16,
+.consonants-17 {
+  background: #ad0202;
+  color: #fff;
+}
+
+.consonants-18,
+.consonants-19,
+.consonants-20 {
+  background: #2727bf;
+  color: #fff;
+}
+
+.consonants-21,
+.consonants-22 {
+  background: #153515;
+  color: #fff;
+}
+
+.consonants-23 {
+  background: #ef6692;
+  color: #fff;
+}
+
+.consonants-24 {
+  background: #790000;
+  color: #fff;
+}

@@ -28,7 +28,7 @@ function startIpa() {
   }
 
   if (getIpa() == 'ipa-vowels') {
-    ipaArray = [...Array.range(1, 12), '11 phụ', '12', '13', '13 phụ', '14', '15', '15 phụ'];
+    ipaArray = [...Array.range(1, 12), '11sub', '12', '13', '13sub', '14', '15', '15sub'];
   } else {
     ipaArray = Array.range(1, 25);
     classWord = 'consonants';
@@ -47,7 +47,7 @@ function startIpa() {
 function runIpa(v, index) {
   timer[index] = setTimeout(() => {
     document.getElementById("content").innerHTML = `
-<span class="ipa-content ${classWord}-${v.toString()}">${v.toString()}</span>
+<span class="ipa-content ${classWord}-${v.toString()}">${v.toString().replace(/sub/i, ' phụ')}</span>
 `;
   }, delay * index);
 }

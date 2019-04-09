@@ -14,14 +14,14 @@ Array.prototype.shuffle = function () {
   return input;
 };
 
-var classWord;
-let delay = getDelay();
+var classWord, delay;
 let timer = {};
 
 document.getElementById('ipa-v').checked = true;
 
 function startIpa() {
   let ipaArray;
+  delay = getDelay()
 
   for (var t in timer) {
     clearTimeout(timer[t]);

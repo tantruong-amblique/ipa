@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+span[class*="ipa-char-/"] {
+  font-family: Arial, sans-serif;
+}
+
 body.menu--active {
   overflow: hidden;
   height: 100vh;
@@ -40,12 +44,12 @@ body.menu--active {
   border: 1px solid #d1d3d4;
 }
 
-input.ipa:empty {
+input.ipa-input:empty {
   margin-left: -999px;
   display: none;
 }
 
-input.ipa:empty~label {
+input.ipa-input:empty~label {
   position: relative;
   float: left;
   line-height: 2.5em;
@@ -58,7 +62,7 @@ input.ipa:empty~label {
   color: #d1d3d4;
 }
 
-input.ipa:empty~label:before {
+input.ipa-input:empty~label:before {
   position: absolute;
   display: block;
   top: 0;
@@ -70,28 +74,28 @@ input.ipa:empty~label:before {
   border-radius: 3px 0 0 3px;
 }
 
-input.ipa:hover:not(:checked)~label {
+input.ipa-input:hover:not(:checked)~label {
   color: #888;
 }
 
-input.ipa:hover:not(:checked)~label:before {
+input.ipa-input:hover:not(:checked)~label:before {
   content: "\2714";
   text-indent: 0.9em;
   color: #c2c2c2;
 }
 
-input.ipa:checked~label {
+input.ipa-input:checked~label {
   color: #333;
 }
 
-input.ipa:checked~label:before {
+input.ipa-input:checked~label:before {
   content: "\2714";
   text-indent: 0.9em;
   color: #9ce2ae;
   background-color: #4dcb6d;
 }
 
-input.ipa:focus~label:before {
+input.ipa-input:focus~label:before {
   box-shadow: 0 0 0 3px #888;
 }
 
@@ -278,48 +282,64 @@ input.ipa:focus~label:before {
 }
 
 /* Vowels Color pallete */
-.vowels-1 {
+.vowels-1,
+.vowels-ɑ {
   background: #ef6692;
   color: #fff;
 }
 
 .vowels-2,
-.vowels-3 {
+.vowels-3,
+.vowels-aɪ,
+.vowels-aʊ {
   background: #e0e00a;
   color: #000;
 }
 
 .vowels-4,
 .vowels-5,
-.vowels-6 {
+.vowels-6,
+.vowels-ɔ,
+.vowels-ɔɪ,
+.vowels-oʊ {
   background: #008000;
   color: #000;
 }
 
 .vowels-7,
 .vowels-8,
-.vowels-9 {
+.vowels-9,
+.vowels-e,
+.vowels-eɪ,
+.vowels-æ {
   background: #ad0202;
   color: #fff;
 }
 
 .vowels-10,
 .vowels-11,
-.vowels-11sub {
+.vowels-11sub,
+.vowels-ɪ,
+.vowels-i {
   background: #2727bf;
   color: #fff;
 }
 
 .vowels-12,
 .vowels-13,
-.vowels-13sub {
+.vowels-13sub,
+.vowels-ʊ,
+.vowels-u {
   background: #153515;
   color: #fff;
 }
 
 .vowels-14,
 .vowels-15,
-.vowels-15sub {
+.vowels-15sub,
+.vowels-ʌ,
+.vowels-ɜ,
+.vowels-ə {
   background: #860086;
   color: #fff;
 }
@@ -328,19 +348,27 @@ input.ipa:focus~label:before {
 .consonants-1,
 .consonants-2,
 .consonants-3,
-.consonants-4 {
+.consonants-4,
+.consonants-p,
+.consonants-b,
+.consonants-f,
+.consonants-v {
   background: #008000;
   color: #000;
 }
 
 .consonants-5,
-.consonants-6 {
+.consonants-6,
+.consonants-k,
+.consonants-g  {
   background: #0bb1e8;
   color: #fff;
 }
 
 .consonants-7,
-.consonants-8 {
+.consonants-8,
+.consonants-θ,
+.consonants-ð {
   background: #860086;
   color: #fff;
 }
@@ -348,7 +376,11 @@ input.ipa:focus~label:before {
 .consonants-9,
 .consonants-10,
 .consonants-11,
-.consonants-12 {
+.consonants-12,
+.consonants-s,
+.consonants-z,
+.consonants-ʃ,
+.consonants-ʒ {
   background: #e0e00a;
   color: #000;
 }
@@ -357,32 +389,56 @@ input.ipa:focus~label:before {
 .consonants-14,
 .consonants-15,
 .consonants-16,
-.consonants-17 {
+.consonants-17,
+.consonants-t,
+.consonants-d,
+.consonants-tʃ,
+.consonants-dʒ,
+.consonants-j {
   background: #ad0202;
   color: #fff;
 }
 
 .consonants-18,
 .consonants-19,
-.consonants-20 {
+.consonants-20,
+.consonants-m,
+.consonants-n,
+.consonants-ŋ {
   background: #2727bf;
   color: #fff;
 }
 
 .consonants-21,
-.consonants-22 {
+.consonants-22,
+.consonants-w,
+.consonants-r {
   background: #153515;
   color: #fff;
 }
 
-.consonants-23 {
+.consonants-23,
+.consonants-h {
   background: #ef6692;
   color: #fff;
 }
 
-.consonants-24 {
+.consonants-24,
+.consonants-l {
   background: #790000;
   color: #fff;
+}
+
+.end::before {
+  content: 'End';
+  display: block;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  z-index: 2;
+  background: #fff;
+  width: 100px;
+  transform: rotate(45deg);
 }
 
 /* Menu */

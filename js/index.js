@@ -16,10 +16,15 @@ Array.prototype.shuffle = function () {
 
 var classWord, delay;
 let timer = {};
+let ipaVowelsWord = ['/ɑ:/','/aɪ/','/aʊ/','/ɔ:/','/ɔɪ/', '/oʊ/', '/e/', '/eɪ/', '/æ/', '/ɪ/', 'i:', 'i', '/ʊ/', '/u:/','/u/', '/ʌ/', '/ɜ:/', '/ə/'];
+
+let ipaConsonantsWord = ['/p/', '/b/', '/f/', '/v/', '/k/', '/g/', '/θ/', '/ð/', '/s/', '/z/', '/ʃ/', '/ʒ/', '/t/', '/d/', '/tʃ/', '/dʒ/', '/j/', '/m/', '/n/', '/ŋ/', '/w/', '/r/', '/h/', '/l/'];
 
 document.getElementById('ipa-v').checked = true;
 
 function startIpa() {
+  document.getElementById("content").classList.remove('end');
+
   let ipaArray;
   delay = getDelay()
 
@@ -30,50 +35,63 @@ function startIpa() {
   if (getIpa() == 'ipa-vowels') {
     ipaArray = [...Array.range(1, 12), '11sub', '12', '13', '13sub', '14', '15', '15sub'];
     classWord = 'vowels';
+
+    if(swapIpa() === 'word') {
+      [...ipaArray] = ipaVowelsWord;
+    }
   } else {
     ipaArray = Array.range(1, 25);
     classWord = 'consonants';
+
+    if(swapIpa() === 'word') {
+      [...ipaArray] = ipaConsonantsWord;
+    }
   }
 
   if (getShuffle()) {
     ipaArray = ipaArray.shuffle();
   }
 
-  //console.log(ipaArray);
+  let ipaLength = ipaArray.length;
+
   ipaArray.forEach((v, index) => {
-    runIpa(v, index);
+    runIpa(v, index, ipaLength);
   });
 }
 
-function runIpa(v, index) {
+function runIpa(v, index, ipaLength) {
   timer[index] = setTimeout(() => {
+    if(ipaLength === index + 1) {
+      document.getElementById("content").classList.add('end');
+    }
     document.getElementById("content").innerHTML = `
-<span class="ipa-content ${classWord}-${v.toString()}">${v.toString().replace(/sub/i, ' phụ')}</span>
+<span class="ipa-content ipa-char-${v.toString()} ${classWord}-${v.toString().replace(/\/|\/|:/g,'')}">${v.toString().replace(/sub/i, ' phụ')}</span>
 `;
   }, delay * index);
 }
 
 function getDelay() {
-  //console.log(parseInt(document.getElementById('delay').value) * 1000);
   return parseInt(document.getElementById('delay').value) * 1000;
 }
 
 function getShuffle() {
-  //console.log(document.getElementById('shuffle').checked);
   return document.getElementById('shuffle').checked;
 }
 
 function getIpa() {
-  // console.log(document.querySelector('input[name="ipa"]:checked').value);
-  return document.querySelector('input[name="ipa"]:checked').value;
+  return document.querySelector('input[name="ipa-input"]:checked').value;
 }
 
+function swapIpa() {
+  return document.getElementById('swap').value
+}
 
 document.getElementById('vowels-btn').addEventListener('click', startIpa);
 document.getElementById('delay').addEventListener('change', getDelay);
 document.getElementById('shuffle').addEventListener('change', getShuffle);
+document.getElementById('swap').addEventListener('change', swapIpa);
 
-var ipaClass = document.getElementsByClassName("ipa");
+var ipaClass = document.getElementsByClassName("ipa-input");
 Array.from(ipaClass).forEach(function (element) {
   element.addEventListener('click', getIpa);
 });

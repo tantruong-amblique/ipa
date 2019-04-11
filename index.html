@@ -58,13 +58,19 @@
     </section>
 </header>
 <div class="wrapper-header">
+  <div class="custom-select d-flex">
+      <select class="browser-default" id="swap">
+        <option value="number">Number</option>
+        <option value="word">Word</option>
+      </select>
+  </div>
   <div class="custom-radio d-flex">
     <div class="inline-div w-50 pr-10">
-      <input class="ipa" id="ipa-v" value="ipa-vowels" name="ipa" type="radio"/>
+      <input class="ipa-input" id="ipa-v" value="ipa-vowels" name="ipa-input" type="radio"/>
       <label for="ipa-v">Vowels</label>
     </div>
     <div class="inline-div w-50 pl-10">
-      <input class="ipa" id="ipa-c" value="ipa-consonants" name="ipa" type="radio" />
+      <input class="ipa-input" id="ipa-c" value="ipa-consonants" name="ipa-input" type="radio" />
       <label for="ipa-c">Consonants</label>
     </div>
   </div>

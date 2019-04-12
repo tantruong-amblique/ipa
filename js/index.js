@@ -105,3 +105,55 @@ Array.from(ipaClass).forEach(function (element) {
       this.parentNode.nextElementSibling.classList.toggle('menu--on');
     });
 })();
+
+// Listen for click on the document
+document.addEventListener('click', function (event) {
+  
+  //Bail if our clicked element doesn't have the class
+  if (!event.target.classList.contains('accordion-toggle')) return;
+  
+  // Get the target content
+  var content = document.querySelector(event.target.hash);
+  if (!content) return;
+  
+  // Prevent default link behavior
+  event.preventDefault();
+  
+  // If the content is already expanded, collapse it and quit
+  if (content.classList.contains('active')) {
+    content.classList.remove('active');
+    return;
+  }
+  
+  // Get all open accordion content, loop through it, and close it
+  var accordions = document.querySelectorAll('.accordion-content.active');
+  for (var i = 0; i < accordions.length; i++) {
+    accordions[i].classList.remove('active');
+  }
+  
+  // Toggle our content
+  content.classList.toggle('active');
+})
+
+/* Tab */
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();

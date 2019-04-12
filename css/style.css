@@ -83,7 +83,7 @@ input.ipa-input:hover:not(:checked)~label {
 }
 
 input.ipa-input:hover:not(:checked)~label:before {
-  content: "\2714";
+  content: "\2714 \fe0e";
   text-indent: 0.9em;
   color: #c2c2c2;
 }
@@ -93,7 +93,7 @@ input.ipa-input:checked~label {
 }
 
 input.ipa-input:checked~label:before {
-  content: "\2714";
+  content: "\2714 \fe0e";
   text-indent: 0.9em;
   color: #9ce2ae;
   background-color: #4dcb6d;
@@ -573,7 +573,7 @@ input.ipa-input:focus~label:before {
 }
 
 .done::after {
-  content: "\2714";
+  content: "\2714 \fe0e";
   text-indent: 22px;
   color: #4dcb6d;
   position: absolute;

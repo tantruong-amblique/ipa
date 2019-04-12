@@ -450,6 +450,7 @@ input.ipa-input:focus~label:before {
   display: none;
   position: absolute;
   left: -50%;
+  top: 50px;
   width: 100vw;
   background: #eee;
   height: calc(100vh - 50px);

@@ -16,7 +16,7 @@ Array.prototype.shuffle = function () {
 
 var classWord, delay;
 let timer = {};
-let ipaVowelsWord = ['/ɑ:/','/aɪ/','/aʊ/','/ɔ:/','/ɔɪ/', '/oʊ/', '/e/', '/eɪ/', '/æ/', '/ɪ/', 'i:', 'i', '/ʊ/', '/u:/','/u/', '/ʌ/', '/ɜ:/', '/ə/'];
+let ipaVowelsWord = ['/ɑ:/','/aɪ/','/aʊ/','/ɔ:/','/ɔɪ/', '/oʊ/', '/e/', '/eɪ/', '/æ/', '/ɪ/', '/i:/', '/i/', '/ʊ/', '/u:/','/u/', '/ʌ/', '/ɜ:/', '/ə/'];
 
 let ipaConsonantsWord = ['/p/', '/b/', '/f/', '/v/', '/k/', '/g/', '/θ/', '/ð/', '/s/', '/z/', '/ʃ/', '/ʒ/', '/t/', '/d/', '/tʃ/', '/dʒ/', '/j/', '/m/', '/n/', '/ŋ/', '/w/', '/r/', '/h/', '/l/'];
 
@@ -136,7 +136,7 @@ document.addEventListener('click', function (event) {
 })
 
 /* Tab */
-function openCity(evt, cityName) {
+function openTab(evt, tabName) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -153,7 +153,7 @@ function openCity(evt, cityName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 document.getElementById("defaultOpen").click();

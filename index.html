@@ -44,15 +44,16 @@
     <section class="menu menu--off">
       <!-- Tab links -->
       <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'tab-vowels')" id="defaultOpen">Nguyên âm</button>
-        <button class="tablinks" onclick="openCity(event, 'tab-consonants')">Phụ âm</button>
+        <button class="tablinks" onclick="openTab(event, 'tab-vowels')" id="defaultOpen">Nguyên âm</button>
+        <button class="tablinks" onclick="openTab(event, 'tab-consonants')">Phụ âm</button>
+        <button class="tablinks" onclick="openTab(event, 'tab-notice')">Lưu ý</button>
       </div>
 
       <!-- Tab content -->
       <div id="tab-vowels" class="tabcontent">
         <ul>
           <li>
-            <a href="#vowels-1" class="accordion-toggle done">Số 1</a>
+            <a href="#vowels-1" class="accordion-toggle done"><i>Số 1</i> <span>/ɑ:/</span></a>
             <div class="accordion-content" id="vowels-1">
               <ol>
                 <li>Môi mở</li>
@@ -64,7 +65,7 @@
           </li>
 
           <li>
-            <a href="#vowels-2" class="accordion-toggle done">Số 2</a>
+            <a href="#vowels-2" class="accordion-toggle done"><i>Số 2</i> <span>/aɪ/</span></a>
             <div class="accordion-content" id="vowels-2">
               <p class="note">Phần 1 - tạo âm 'a'</p>
               <ol>
@@ -74,7 +75,7 @@
               </ol>
               <p class="note">Phần 2 - tạo âm 'ì'</p>
               <ol>
-                <li>Cơ miệng mở ngang</li>
+                <li>Khẩu hình mở ngang</li>
                 <li>Nâng nhanh hàm dưới lên</li>
                 <li>Chính giữa thân lưỡi có khuynh hướng chạm vào vòm họng</li>
                 <li>Tạo âm 'ì' như trong từ kiki</li>
@@ -88,14 +89,30 @@
             </div>
           </li>
           <li>
-            <a href="#vowels-3" class="accordion-toggle">Số 3</a>
+            <a href="#vowels-3" class="accordion-toggle done"><i>Số 3</i> <span>/aʊ/</span></a>
             <div class="accordion-content" id="vowels-3">
-              Updating...
+                <p class="note">Phần 1 - tạo âm 'a'</p>
+                <ol>
+                  <li>Khẩu hình mở ngang tạo thành hình chữ nhật, ngang nhiều hơn dọc</li>
+                  <li>Tao âm 'a'  như khi cười haha</li>
+                  <li>Giữ nguyên khẩu hình</li>
+                </ol>
+                <p class="note">Phần 2 - tạo âm 'ù'</p>
+                <ol>
+                  <li>Hóp má tròn môi</li>
+                  <li>Hàm dưới hạ xuống và nâng lên nhanh</li>
+                  <li>Tạo âm 'ù' giống trong từ 'u ú ù'</li>
+                  <li>Tạo âm 'ù' nhanh, nhỏ, nhẹ</li>
+                </ol>
+                <p class="note">Phần 3 - kết hợp</p>
+                <ol>
+                  <li>Kết hợp âm 'a' và 'ù' theo tỉ lệ 3:1</li>
+                </ol>
             </div>
           </li>
           
           <li>
-            <a href="#vowels-4" class="accordion-toggle done">Số 4</a>
+            <a href="#vowels-4" class="accordion-toggle done"><i>Số 4</i> <span>/ɔ:/</span></a>
             <div class="accordion-content" id="vowels-4">
               <ol>
                 <li>Hóp mà tròn môi</li>
@@ -107,7 +124,7 @@
             </div>
           </li>
           <li>
-            <a href="#vowels-5" class="accordion-toggle done">Số 5</a>
+            <a href="#vowels-5" class="accordion-toggle done"><i>Số 5</i> <span>/ɔɪ/</span></a>
             <div class="accordion-content" id="vowels-5">
               <p class="note">Phần 1 - tạo âm 'o'</p>
               <ol>
@@ -133,7 +150,7 @@
             </div>
           </li>
           <li>
-            <a href="#vowels-6" class="accordion-toggle done">Số 6</a>
+            <a href="#vowels-6" class="accordion-toggle done"><i>Số 6</i> <span>/oʊ/</span></a>
             <div class="accordion-content" id="vowels-6">
               <p class="note">Phần 1 - tạo âm 'o'</p>
               <ol>
@@ -158,26 +175,70 @@
           </li>
 
           <li>
-            <a href="#vowels-7" class="accordion-toggle">Số 7</a>
+            <a href="#vowels-7" class="accordion-toggle done"><i>Số 7</i> <span>/e/</span></a>
             <div class="accordion-content" id="vowels-7">
-              Updating...
+                <ol>
+                  <li>Khẩu hình mở ngang</li>
+                  <li>Chính giữa thân lưỡi nâng lên chạm vòm họng</li>
+                  <li>Tạo âm 'e' trong từ 'nhe ờ', lưu ý không hạ hàm dưới</li>
+                  <li>Kết thúc âm lúc lưỡi trũng</li>
+                  <li>Giữ chắc khẩu hình</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#vowels-8" class="accordion-toggle">Số 8</a>
+            <a href="#vowels-8" class="accordion-toggle done"><i>Số 8</i> <span>/eɪ/</span></a>
             <div class="accordion-content" id="vowels-8">
-              Updating...
+                <p class="note">Phần 1 - tạo âm 'e' giống nguyên âm số 7</p>
+                <ol>
+                  <li>Khẩu hình mở ngang</li>
+                  <li>Chính giữa thân lưỡi nâng lên chạm vòm họng</li>
+                  <li>Tạo âm 'e' trong từ 'nhe ờ', lưu ý không hạ hàm dưới</li>
+                  <li>Kết thúc âm lúc lưỡi trũng</li>
+                  <li>Giữ chắc khẩu hình</li>
+                </ol>
+                <p class="note">Phần 2 - tạo âm 'ì' giống phần 2 của nguyên âm số 2</p>
+                <ol>
+                  <li>Khẩu hình mở ngang</li>
+                  <li>Nâng nhanh hàm dưới lên</li>
+                  <li>Lưỡi chạm vòm họng </li>
+                  <li>Tạo âm 'ì' như trong từ kiki</li>
+                  <li>Tạo âm 'ì' nhanh, nhỏ nhẹ</li>
+                  <li>Giữ chắc khẩu hình</li>
+                </ol>
+                <p class="note">Phần 3 - kết hợp</p>
+                <ol>
+                  <li>Kết hợp âm 'e' và 'ì' theo tỉ lệ 3:1</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#vowels-9" class="accordion-toggle">Số 9</a>
+            <a href="#vowels-9" class="accordion-toggle done"><i>Số 9</i> <span>/æ/</span></a>
             <div class="accordion-content" id="vowels-9">
-              Updating...
+                <p class="note">Phần 1 - tạo âm 'e' giống nguyên âm số 7</p>
+                <ol>
+                  <li>Khẩu hình mở ngang</li>
+                  <li>Chính giữa thân lưỡi nâng lên chạm vòm họng</li>
+                  <li>Tạo âm 'e' trong từ 'nhe ờ', lưu ý không hạ hàm dưới</li>
+                  <li>Kết thúc âm lúc lưỡi trũng</li>
+                  <li>Giữ chắc khẩu hình</li>
+                </ol>
+                <p class="note">Phần 2 - tạo âm 'à' giống phần 1 của nguyên âm số 2</p>
+                <ol>
+                  <li>Khẩu hình mở ngang thành hình chữ nhật, ngang nhiều hơn dọc</li>
+                  <li>Tạo âm 'à' trong từ 'hà hà'</li>
+                  <li>Tạo âm 'à' nhanh, nhỏ, nhẹ</li>
+                  <li>Giữ chắc khẩu hình</li>
+                </ol>
+                <p class="note">Phần 3 - kết hợp</p>
+                <ol>
+                  <li>Kết hợp âm 'e' và 'à' theo tỉ lệ 3:1</li>
+                </ol>
             </div>
           </li>
 
           <li>
-            <a href="#vowels-10" class="accordion-toggle done">Số 10</a>
+            <a href="#vowels-10" class="accordion-toggle done"><i>Số 10</i> <span>/ɪ/</span></a>
             <div class="accordion-content" id="vowels-10">
               <ol>
                 <li>Môi mở, khẩu hình theo chiều dọc và không hạ hàm dưới</li>
@@ -191,39 +252,67 @@
             </div>
           </li>
           <li>
-            <a href="#vowels-11" class="accordion-toggle">Số 11</a>
+            <a href="#vowels-11" class="accordion-toggle done"><i>Số 11</i> <span>/i:/</span></a>
             <div class="accordion-content" id="vowels-11">
-              Updating...
+                <ol>
+                  <li>Khẩu hình mở ngang</li>
+                  <li>Nâng nhanh hàm dưới lên</li>
+                  <li>Phần chính giữa thân lưỡi chạm vào vòm họng trên</li>
+                  <li>Tạo âm 'i' như trong từ kiki</li>
+                  <li>Giữ chắc khẩu hình sau khi tạo âm</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#vowels-11sub" class="accordion-toggle">Số 11 phụ</a>
+            <a href="#vowels-11sub" class="accordion-toggle done"><i>Số 11 phụ</i> <span>/i/</span></a>
             <div class="accordion-content" id="vowels-11sub">
-              Updating...
+                <p class="note">Giống tạo nguyên âm số 11 nhưng thêm dấu "huyền" thành "ì"</p>
             </div>
           </li>
 
           <li>
-            <a href="#vowels-12" class="accordion-toggle">Số 12</a>
+            <a href="#vowels-12" class="accordion-toggle done"><i>Số 12</i> <span>/ʊ/</span></a>
             <div class="accordion-content" id="vowels-12">
-              Updating...
+              <ol>
+                <li>Cơ miệng có khuynh hướng mở theo chiều dọc nhẹ</li>
+                <li>Dồn lực vào cơ hàm dưới</li>
+                <li>Đẩy lực từ trong ra ngoài</li>
+                <li>Cơ môi trên không cử động</li>
+                <li>Tạo âm 'ua' trong từ 'búa lua xua'</li>
+                <li>Giữ chắc khẩu hình</li>
+              </ol>  
             </div>
           </li>
           <li>
-            <a href="#vowels-13" class="accordion-toggle">Số 13</a>
+            <a href="#vowels-13" class="accordion-toggle done"><i>Số 13</i> <span>/u:/</span></a>
             <div class="accordion-content" id="vowels-13">
-              Updating...
+                <p class="note">Các 1 - Giống phần 2 kỹ thuật tạo nguyên âm số 3</p>
+                <ol>
+                  <li>Khẩu hình mở ngang</li>
+                  <li>Đẩy lực từ hai bên má ngoài vào</li>
+                  <li>Hóp má tròn môi</li>
+                  <li>Hàm dưới hạ xuống rồi nâng lên nhanh</li>
+                  <li>Tạo âm 'u' giống trong từ 'ù ú u'</li>
+                  <li>Giữ chắc khẩu hình</li>
+                </ol>
+                <p class="note">Cách 2 - Giống phần 2 của kỹ thuật tạo nguyên âm số 6</p>
+                <ol>
+                  <li>Hóp má tròn môi</li>
+                  <li>Hàm dưới hạ xuống rồi nâng lên nhanh</li>
+                  <li>Tạo âm 'u' giống trong từ 'ù ú u'</li>
+                  <li>Giữ chắc khẩu hình</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#vowels-13sub" class="accordion-toggle">Số 13 phụ</a>
+            <a href="#vowels-13sub" class="accordion-toggle done"><i>Số 13 phụ</i> <span>/u/</span></a>
             <div class="accordion-content" id="vowels-13sub">
-              Updating...
+                <p class="note">Giống tạo nguyên âm số 13 nhưng thêm dấu "huyền" thành "ù"</p>
             </div>
           </li>
 
           <li>
-            <a href="#vowels-14" class="accordion-toggle done">Số 14</a>
+            <a href="#vowels-14" class="accordion-toggle done"><i>Số 14</i> <span>/ʌ/</span></a>
             <div class="accordion-content" id="vowels-14">
               <ol>
                 <li>Khẩu hình mở dọc nhẹ</li>
@@ -233,7 +322,7 @@
             </div>
           </li>
           <li>
-            <a href="#vowels-15" class="accordion-toggle done">Số 15</a>
+            <a href="#vowels-15" class="accordion-toggle done"><i>Số 15</i> <span>/ɜ:/</span></a>
             <div class="accordion-content" id="vowels-15">
               <ol>
                 <li>Khẩu hình mở dọc nhẹ</li>
@@ -244,7 +333,7 @@
             </div>
           </li>
           <li>
-            <a href="#vowels-15sub" class="accordion-toggle done">Số 15 phụ</a>
+            <a href="#vowels-15sub" class="accordion-toggle done"><i>Số 15 phụ</i> <span>/ə/</span></a>
             <div class="accordion-content" id="vowels-15sub">
               <ol>
                 <li>Khẩu hình mở dọc nhẹ</li>
@@ -260,115 +349,195 @@
       <div id="tab-consonants" class="tabcontent">
         <ul>
           <li>
-            <a href="#consonants-1" class="accordion-toggle">Số 1</a>
+            <a href="#consonants-1" class="accordion-toggle done">Số 1 <span>/p/</span></a>
             <div class="accordion-content" id="consonants-1">
-              Updating...
+                <ol>
+                  <li>Môi chạm môi</li>
+                  <li>Lấy hơi hóp bụng</li>
+                  <li>Bật mạnh môi.</li>
+                  <li>Tạo âm 'p' giống từ ping pong</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-2" class="accordion-toggle">Số 2</a>
+            <a href="#consonants-2" class="accordion-toggle done">Số 2 <span>/b/</span></a>
             <div class="accordion-content" id="consonants-2">
-              Updating...
+                <ol>
+                  <li>Môi chạm môi</li>
+                  <li>Ép lực</li>
+                  <li>Bật mạnh môi.</li>
+                  <li>Tạo âm 'b' giống từ bà ba trong tiếng Việt với độ mạnh gấp 3 lần</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-3" class="accordion-toggle">Số 3</a>
+            <a href="#consonants-3" class="accordion-toggle done">Số 3 <span>/f/</span></a>
             <div class="accordion-content" id="consonants-3">
-              Updating...
+              <ol>
+                <li>Lấy hơi, hóp bụng</li>
+                <li>Môi mở</li>
+                <li>Răng hàm trên chạm 1/3 môi dưới phía bên trong</li>
+                <li>Đẩy hơi 5 giây</li>
+                <li>Tạo âm /f/ giống trong từ 'phởn phơ' với độ mạnh gấp 3 lần</li>
+              </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-4" class="accordion-toggle">Số 4</a>
+            <a href="#consonants-4" class="accordion-toggle done">Số 4 <span>/v/</span></a>
             <div class="accordion-content" id="consonants-4">
-              Updating...
+              <ol>
+                <li>Lấy hơi, hóp bụng</li>
+                <li>Môi mở</li>
+                <li>Răng hàm trên chạm 1/3 môi dưới phía bên trong</li>
+                <li>Ép lực</li>
+                <li>Đẩy hơi 5 giây</li>
+                <li>Tạo âm /v/ giống trong từ 'vật vờ' với độ mạnh gấp 3 lần</li>
+              </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-5" class="accordion-toggle">Số 5</a>
+            <a href="#consonants-5" class="accordion-toggle done">Số 5 <span>/k/</span></a>
             <div class="accordion-content" id="consonants-5">
-              Updating...
+              <ol>
+                <li>Môi mở</li>
+                <li>Cảm nhận trái khế ở cổ</li>
+                <li>Dùng lực đưa trái khế lên</li>
+                <li>Bật mạnh cơ cổ</li>
+                <li>Tạo âm /k/ giống trong từ 'cà kê' với độ mạnh gấp 3 lần</li>
+              </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-6" class="accordion-toggle">Số 6</a>
+            <a href="#consonants-6" class="accordion-toggle done">Số 6 <span>/g/</span></a>
             <div class="accordion-content" id="consonants-6">
-              Updating...
+              <ol>
+                  <li>Môi mở</li>
+                  <li>Cảm nhận trái khế ở cổ</li>
+                  <li>Dùng lực đưa trái khế lên</li>
+                  <li>Ép lực</li>
+                  <li>Tạo âm /g/ giống trong từ 'gặp gỡ' với độ mạnh gấp 3 lần</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-7" class="accordion-toggle">Số 7</a>
+            <a href="#consonants-7" class="accordion-toggle done">Số 7 <span>/θ/</span></a>
             <div class="accordion-content" id="consonants-7">
-              Updating...
+                <ol>
+                  <li>Môi mở</li>
+                  <li>Lấy hơi hóp bụng</li>
+                  <li>Lưỡi giữa hai hàm răng</li>
+                  <li>Đẩy hơi 5 giây</li>
+                  <li>Tạo âm /θ/ giống trong từ 'thì thầm' với độ mạnh gấp 3 lần</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-8" class="accordion-toggle">Số 8</a>
+            <a href="#consonants-8" class="accordion-toggle done">Số 8 <span>/ð/</span></a>
             <div class="accordion-content" id="consonants-8">
-              Updating...
+              <ol>
+                <li>Môi mở</li>
+                <li>Lưỡi giữa hai hàm răng</li>
+                <li>Mặt trên của lưỡi chạm răng hàm trên</li>
+                <li>Ép lực</li>
+                <li>Tạo âm /ð/ giống từ 'đa đa' với độ mạnh gấp 3 lần (lưu ý: cơ hàm dưới không di chuyển khi tạo âm)</li>
+              </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-9" class="accordion-toggle">Số 9</a>
+            <a href="#consonants-9" class="accordion-toggle done">Số 9 <span>/s/</span></a>
             <div class="accordion-content" id="consonants-9">
-              Updating...
+                <ol>
+                  <li>Môi mở</li>
+                  <li>Hai hàm răng gần như chạm nhau</li>
+                  <li>Lưỡi thẳng, đẩy hơi 5 giây</li>
+                  <li>Tạo âm 'x' giống trong từ 'xinh xắn, xôn xao'</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-10" class="accordion-toggle">Số 10</a>
+            <a href="#consonants-10" class="accordion-toggle done">Số 10 <span>/z/</span></a>
             <div class="accordion-content" id="consonants-10">
-              Updating...
+                <ol>
+                  <li>Môi mở</li>
+                  <li>Hai hàm răng gần như chạm nhau</li>
+                  <li>1/3 đầu lưỡi gần như chạm vòm họng</li>
+                  <li>Ép lực,  đẩy hơi 5 giây</li>
+                  <li>Tạo âm 'gi' giống trong từ 'giỏi giang' với độ mạnh gấp 3 lần</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-11" class="accordion-toggle">Số 11</a>
+            <a href="#consonants-11" class="accordion-toggle done">Số 11 <span>/ʃ/</span></a>
             <div class="accordion-content" id="consonants-11">
-              Updating...
+                <ol>
+                  <li>Môi mở</li>
+                  <li>Hai hàm răng gần như chạm nhau</li>
+                  <li>Lưỡi cong lên, mặt dưới phía đầu lưỡi gần như chạm chính giữa vòm họng</li>
+                  <li>Đẩy hơi 5 giây</li>
+                  <li>Tạo âm 's' giống trong từ 'sáo sang sông'</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-12" class="accordion-toggle">Số 12</a>
+            <a href="#consonants-12" class="accordion-toggle done">Số 12 <span>/ʒ/</span></a>
             <div class="accordion-content" id="consonants-12">
-              Updating...
+                <ol>
+                  <li>Môi mở</li>
+                  <li>Hai hàm răng gần như chạm nhau</li>
+                  <li>Lưỡi cong lên, mặt dưới phía đầu lưỡi gần như chạm chính giữa vòm họng</li>
+                  <li>Ép lực, đẩy hơi 5 giây</li>
+                  <li>Tạo âm '/ʒ/' giống từ '/ʒ/áo /ʒ/ang /ʒ/ông'</li>
+                </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-13" class="accordion-toggle">Số 13</a>
+            <a href="#consonants-13" class="accordion-toggle">Số 13 <span>/t/</span></a>
             <div class="accordion-content" id="consonants-13">
               Updating...
             </div>
           </li>
           <li>
-            <a href="#consonants-14" class="accordion-toggle">Số 14</a>
+            <a href="#consonants-14" class="accordion-toggle">Số 14 <span>/d/</span></a>
             <div class="accordion-content" id="consonants-14">
               Updating...
             </div>
           </li>
           <li>
-            <a href="#consonants-15" class="accordion-toggle">Số 15</a>
+            <a href="#consonants-15" class="accordion-toggle">Số 15 <span>/tʃ/</span></a>
             <div class="accordion-content" id="consonants-15">
               Updating...
             </div>
           </li>
           <li>
-            <a href="#consonants-16" class="accordion-toggle">Số 16</a>
+            <a href="#consonants-16" class="accordion-toggle">Số 16 <span>/dʒ/</span></a>
             <div class="accordion-content" id="consonants-16">
               Updating...
             </div>
           </li>
           <li>
-            <a href="#consonants-17" class="accordion-toggle">Số 17</a>
+            <a href="#consonants-17" class="accordion-toggle">Số 17 <span>/j/</span></a>
             <div class="accordion-content" id="consonants-17">
-              Updating...
+              <ol>
+                <li>Môi mở</li>
+                <li>Chính giữa thân lưỡi nâng lên chạm vòm họng</li>
+                <li>Ép lực</li>
+                <li>Tạo âm 'd' giống trong từ 'da diết' với độ mạnh gấp 3 lần</li>
+                <li>Cơ hàm dưới không di chuyển</li>
+              </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-18" class="accordion-toggle">Số 18</a>
+            <a href="#consonants-18" class="accordion-toggle done">Số 18 <span>/m/</span></a>
             <div class="accordion-content" id="consonants-18">
-              Updating...
+              <ol>
+                <li>Môi chạm môi</li>
+                <li>Ép lực, đẩy âm lên mũi</li>
+                <li>Tạo âm 'm' giống từ 'may mắn' trong tiếng Việt với độ mạnh gấp 3 lần.</li>
+              </ol>
             </div>
           </li>
           <li>
-            <a href="#consonants-19" class="accordion-toggle done">Số 19</a>
+            <a href="#consonants-19" class="accordion-toggle done">Số 19 <span>/n/</span></a>
             <div class="accordion-content" id="consonants-19">
               <ol>
                 <li>Môi mở</li>
@@ -379,7 +548,7 @@
             </div>
           </li>
           <li>
-            <a href="#consonants-20" class="accordion-toggle done">Số 20</a>
+            <a href="#consonants-20" class="accordion-toggle done">Số 20 <span>/ŋ/</span></a>
             <div class="accordion-content" id="consonants-20">
               <ol>
                 <li>Môi mở</li>
@@ -390,7 +559,7 @@
             </div>
           </li>
           <li>
-            <a href="#consonants-21" class="accordion-toggle done">Số 21</a>
+            <a href="#consonants-21" class="accordion-toggle done">Số 21 <span>/w/</span></a>
             <div class="accordion-content" id="consonants-21">
               <ol>
                 <li>Hóp má tròn môi (lưu ý: hai môi không chạm nhau)</li>
@@ -401,7 +570,7 @@
             </div>
           </li>
           <li>
-            <a href="#consonants-22" class="accordion-toggle done">Số 22</a>
+            <a href="#consonants-22" class="accordion-toggle done">Số 22 <span>/r/</span></a>
             <div class="accordion-content" id="consonants-22">
               <ol>
                 <li>Hóp má tròn môi (lưu ý: hai môi không chạm nhau)</li>
@@ -414,7 +583,7 @@
             </div>
           </li>
           <li>
-            <a href="#consonants-23" class="accordion-toggle done">Số 23</a>
+            <a href="#consonants-23" class="accordion-toggle done">Số 23 <span>/h/</span></a>
             <div class="accordion-content" id="consonants-23">
               <ol>
                 <li>Lấy hơi, hóp bụng</li>
@@ -424,7 +593,7 @@
             </div>
           </li>
           <li>
-            <a href="#consonants-24" class="accordion-toggle done">Số 24</a>
+            <a href="#consonants-24" class="accordion-toggle done">Số 24 <span>/l/</span></a>
             <div class="accordion-content" id="consonants-24">
               <ol>
                 <li>Môi mở</li>
@@ -433,6 +602,19 @@
                 <li>Tạo âm 'l' như trong từ 'lượn lờ'</li>
               </ol>
             </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="tab-notice" class="tabcontent">
+        <p class="note">Dành khi đi thi</p>
+        <ul>
+          <li>Nhớ chạy kỹ thuật trong đầu trước khi phát âm</li>
+          <li>Búng tay đối với các nguyên âm đôi như: <br>
+            <span class="red arial">'/aɪ/','/aʊ/', '/ɔɪ/', '/oʊ/', '/eɪ/', '/æ/'</span>
+          </li>
+          <li>Nhở đẩy hơi 5 giây cho các âm như: <br>
+            <span class="arial">'/f/', '/v/', '/θ/', '/s/', '/z/', '/ʃ/', '/ʒ/'</span>
           </li>
         </ul>
       </div>

@@ -9,6 +9,10 @@ body {
   color: #f00;
 }
 
+.arial {
+  font-family: Arial, sans-serif;
+}
+
 span[class*="ipa-char-/"] {
   font-family: Arial, sans-serif;
 }
@@ -511,7 +515,7 @@ input.ipa-input:focus~label:before {
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border-bottom: 1px solid #4dcb6d;
+  border-bottom: 3px solid #4dcb6d;
   background-color: #f1f1f1;
   width: 100%;
   display: flex;
@@ -522,6 +526,7 @@ input.ipa-input:focus~label:before {
 .tab button {
   background-color: inherit;
   border: none;
+  border-left: 1px solid #4dcb6d;
   outline: none;
   cursor: pointer;
   display: block;
@@ -530,6 +535,10 @@ input.ipa-input:focus~label:before {
   padding: 14px 16px;
   transition: 0.3s;
   width: 50%;
+}
+
+.tab button:first-child {
+  border-left: 0;
 }
 
 /* Change background color of buttons on hover */
@@ -561,7 +570,9 @@ input.ipa-input:focus~label:before {
 
 /* accordion */
 .accordion-toggle {
-  display: block;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
   background-color: #fff;
   color: #444;
   cursor: pointer;
@@ -571,6 +582,22 @@ input.ipa-input:focus~label:before {
   outline: none;
   transition: 0.4s;
   text-decoration: none;
+}
+
+.accordion-toggle span {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin: 0 auto;
+  width: 30px;
+}
+
+.accordion-toggle i {
+  font-style: normal;
+  width: 75px;
+}
+
+#tab-vowels .accordion-toggle span {
+  color: #f00;
 }
 
 .done::after {
@@ -596,4 +623,20 @@ input.ipa-input:focus~label:before {
   border: none;
   padding: 5px 0;
   text-decoration: none;
+}
+
+
+/* Tab Notice */
+#tab-notice {
+  padding: 0 15px 15px;
+}
+
+#tab-notice ul {
+  list-style: decimal;
+  margin-left: 15px;
+}
+
+#tab-notice li {
+  border: none;
+  padding-bottom: 15px;
 }

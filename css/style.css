@@ -291,7 +291,8 @@ input.ipa-input:focus~label:before {
 
 /* Vowels Color pallete */
 .vowels-1,
-.vowels-ɑ {
+.vowels-ɑ,
+.mixed-ɑ  {
   background: #ef6692;
   color: #fff;
 }
@@ -299,7 +300,9 @@ input.ipa-input:focus~label:before {
 .vowels-2,
 .vowels-3,
 .vowels-aɪ,
-.vowels-aʊ {
+.vowels-aʊ,
+.mixed-aɪ,
+.mixed-aʊ {
   background: #e0e00a;
   color: #000;
 }
@@ -309,7 +312,10 @@ input.ipa-input:focus~label:before {
 .vowels-6,
 .vowels-ɔ,
 .vowels-ɔɪ,
-.vowels-oʊ {
+.vowels-oʊ,
+.mixed-ɔ,
+.mixed-ɔɪ,
+.mixed-oʊ {
   background: #008000;
   color: #000;
 }
@@ -319,7 +325,9 @@ input.ipa-input:focus~label:before {
 .vowels-9,
 .vowels-e,
 .vowels-eɪ,
-.vowels-æ {
+.vowels-æ,
+.mixed-eɪ,
+.mixed-æ {
   background: #ad0202;
   color: #fff;
 }
@@ -328,7 +336,9 @@ input.ipa-input:focus~label:before {
 .vowels-11,
 .vowels-11sub,
 .vowels-ɪ,
-.vowels-i {
+.vowels-i,
+.mixed-ɪ,
+.mixed-i {
   background: #2727bf;
   color: #fff;
 }
@@ -337,7 +347,9 @@ input.ipa-input:focus~label:before {
 .vowels-13,
 .vowels-13sub,
 .vowels-ʊ,
-.vowels-u {
+.vowels-u,
+.mixed-ʊ,
+.mixed-u  {
   background: #153515;
   color: #fff;
 }
@@ -347,7 +359,10 @@ input.ipa-input:focus~label:before {
 .vowels-15sub,
 .vowels-ʌ,
 .vowels-ɜ,
-.vowels-ə {
+.vowels-ə,
+.mixed-ʌ,
+.mixed-ɜ,
+.mixed-ə {
   background: #860086;
   color: #fff;
 }
@@ -360,7 +375,11 @@ input.ipa-input:focus~label:before {
 .consonants-p,
 .consonants-b,
 .consonants-f,
-.consonants-v {
+.consonants-v,
+.mixed-p,
+.mixed-b,
+.mixed-f,
+.mixed-v {
   background: #008000;
   color: #000;
 }
@@ -368,7 +387,9 @@ input.ipa-input:focus~label:before {
 .consonants-5,
 .consonants-6,
 .consonants-k,
-.consonants-g  {
+.consonants-g,
+.mixed-k,
+.mixed-g  {
   background: #0bb1e8;
   color: #fff;
 }
@@ -376,7 +397,9 @@ input.ipa-input:focus~label:before {
 .consonants-7,
 .consonants-8,
 .consonants-θ,
-.consonants-ð {
+.consonants-ð,
+.mixed-θ,
+.mixed-ð  {
   background: #860086;
   color: #fff;
 }
@@ -388,7 +411,11 @@ input.ipa-input:focus~label:before {
 .consonants-s,
 .consonants-z,
 .consonants-ʃ,
-.consonants-ʒ {
+.consonants-ʒ,
+.mixed-s,
+.mixed-z,
+.mixed-ʃ,
+.mixed-ʒ {
   background: #e0e00a;
   color: #000;
 }
@@ -402,7 +429,12 @@ input.ipa-input:focus~label:before {
 .consonants-d,
 .consonants-tʃ,
 .consonants-dʒ,
-.consonants-j {
+.consonants-j,
+.mixed-t,
+.mixed-d,
+.mixed-tʃ,
+.mixed-dʒ,
+.mixed-j  {
   background: #ad0202;
   color: #fff;
 }
@@ -412,7 +444,10 @@ input.ipa-input:focus~label:before {
 .consonants-20,
 .consonants-m,
 .consonants-n,
-.consonants-ŋ {
+.consonants-ŋ,
+.mixed-m,
+.mixed-n,
+.mixed-ŋ {
   background: #2727bf;
   color: #fff;
 }
@@ -420,19 +455,23 @@ input.ipa-input:focus~label:before {
 .consonants-21,
 .consonants-22,
 .consonants-w,
-.consonants-r {
+.consonants-r,
+.mixed-w,
+.mixed-r {
   background: #153515;
   color: #fff;
 }
 
 .consonants-23,
-.consonants-h {
+.consonants-h,
+.mixed-h {
   background: #ef6692;
   color: #fff;
 }
 
 .consonants-24,
-.consonants-l {
+.consonants-l,
+.mixed-l {
   background: #790000;
   color: #fff;
 }

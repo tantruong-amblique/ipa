@@ -32,19 +32,25 @@ function startIpa() {
     clearTimeout(timer[t]);
   }
 
-  if (getIpa() == 'ipa-vowels') {
-    ipaArray = [...Array.range(1, 12), '11sub', '12', '13', '13sub', '14', '15', '15sub'];
-    classWord = 'vowels';
-
-    if(swapIpa() === 'word') {
-      [...ipaArray] = ipaVowelsWord;
-    }
+  // Mixed
+  if(swapIpa() === 'mixed') {
+    ipaArray = [...ipaVowelsWord, ...ipaConsonantsWord];
+    classWord = 'mixed';
   } else {
-    ipaArray = Array.range(1, 25);
-    classWord = 'consonants';
-
-    if(swapIpa() === 'word') {
-      [...ipaArray] = ipaConsonantsWord;
+    if (getIpa() == 'ipa-vowels') {
+      ipaArray = [...Array.range(1, 12), '11sub', '12', '13', '13sub', '14', '15', '15sub'];
+      classWord = 'vowels';
+  
+      if(swapIpa() === 'word') {
+        [...ipaArray] = ipaVowelsWord;
+      }
+    } else {
+      ipaArray = Array.range(1, 25);
+      classWord = 'consonants';
+  
+      if(swapIpa() === 'word') {
+        [...ipaArray] = ipaConsonantsWord;
+      }
     }
   }
 
@@ -83,7 +89,14 @@ function getIpa() {
 }
 
 function swapIpa() {
-  return document.getElementById('swap').value
+  let swapType = document.getElementById('swap').value;
+  if(swapType === 'mixed') {
+    document.getElementsByClassName('custom-radio')[0].style.display = 'none';
+  } else {
+    document.getElementsByClassName('custom-radio')[0].style.display = 'flex';
+  }
+
+  return swapType
 }
 
 document.getElementById('vowels-btn').addEventListener('click', startIpa);

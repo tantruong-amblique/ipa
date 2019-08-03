@@ -89,6 +89,7 @@ function runIpa(v, index, ipaLength) {
     if(numberPrefix <= 100) {
       switch(numberPrefix) {
         case 1:
+        case 21:
           textPrefix = 'st';
           break;
         case 2: 

@@ -20,8 +20,8 @@ let ipaVowelsWord = ['/ɑ:/','/aɪ/','/aʊ/','/ɔ:/','/ɔɪ/', '/oʊ/', '/e/', '
 
 let ipaConsonantsWord = ['/p/', '/b/', '/f/', '/v/', '/k/', '/g/', '/θ/', '/ð/', '/s/', '/z/', '/ʃ/', '/ʒ/', '/t/', '/d/', '/tʃ/', '/dʒ/', '/j/', '/m/', '/n/', '/ŋ/', '/w/', '/r/', '/h/', '/l/'];
 
-let numbersOrdinal = [...Array.range(1, 22), 30, 40, 50, 60, 70, 80, 90, 100];
-let numbersCardinal = [101, 140, 200, 1000, 1050, 1200, 10000, 100000, 2000000, 2500000];
+let numbersOrdinal = ['1','2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '30', '40', '50', '60', '70', '80', '90', '100'];
+let numbersCardinal = ['101', '140', '200', '1000', '1,050', '1,200', '10,000', '100,000', '2,000,000', '2,500,000'];
 
 document.getElementById('ipa-v').checked = true;
 
@@ -41,15 +41,12 @@ function startIpa() {
     classWord = 'mixed';
   } else if(swapIpa() === 'mixNumbers') {
     ipaArray = [...numbersOrdinal, ...numbersCardinal];
-    delay = (delay * 60)/ipaArray.length;
     classWord = 'numbers';
   } else if(swapIpa() === 'ordinalNumbers') {
     ipaArray = numbersOrdinal;
-    delay = (delay * 60)/ipaArray.length;
     classWord = 'numbers';
   } else if(swapIpa() === 'cardinalNumbers') {
     ipaArray = numbersCardinal;
-    delay = (delay * 60)/ipaArray.length;
     classWord = 'numbers';
   } else {
     if (getIpa() == 'ipa-vowels') {
@@ -85,24 +82,46 @@ function runIpa(v, index, ipaLength) {
     if(ipaLength === index + 1) {
       document.getElementById("content").classList.add('end');
     }
+
+    var numberPrefix = parseInt(v);
+    var textPrefix = '';
+
+    if(numberPrefix <= 100) {
+      switch(numberPrefix) {
+        case 1:
+          textPrefix = 'st';
+          break;
+        case 2: 
+          textPrefix = 'nd';
+          break;
+        case 3:
+          textPrefix = 'rd';
+          break;
+        default:
+          textPrefix = 'th';
+      }
+    }
+  
     document.getElementById("content").innerHTML = `
-<span class="ipa-content ipa-char-${v.toString()} ${classWord}-${v.toString().replace(/\/|\/|:/g,'')}">${v.toString().replace(/sub/i, ' phụ')}</span>
+<span class="ipa-content ipa-char-${v.toString()} ${classWord}-${v.toString().replace(/\/|\/|:/g,'')}">${v.toString().replace(/sub/i, ' phụ')}<sup>${textPrefix}</sup></span>
 `;
   }, delay * index);
 }
 
 function getDelay() {
-  let swapDelay = swapIpa();
+  return parseInt(document.getElementById('delay').value) * 10000;
 
-  switch(swapDelay) {
-    case 'ordinalNumbers':
-    case 'cardinalNumbers':
-    case 'mixNumbers':
-      return parseInt(document.getElementById('delayNumber').value) * 1000;
-      break;
-    default:
-        return parseInt(document.getElementById('delay').value) * 1000;
-  }
+  // let swapDelay = swapIpa();
+
+  // switch(swapDelay) {
+  //   case 'ordinalNumbers':
+  //   case 'cardinalNumbers':
+  //   case 'mixNumbers':
+  //     return parseInt(document.getElementById('delayNumber').value) * 1000;
+  //     break;
+  //   default:
+  //       return parseInt(document.getElementById('delay').value) * 1000;
+  // }
 }
 
 function getShuffle() {
@@ -118,14 +137,14 @@ function swapIpa() {
 
   switch(swapType) {
     case 'mixed':
-      document.getElementsByClassName('custom-radio')[0].style.display = 'none';
-      break;
+      // document.getElementsByClassName('custom-radio')[0].style.display = 'none';
+      // break;
     case 'ordinalNumbers':
     case 'cardinalNumbers':
     case 'mixNumbers':
-      document.getElementById('delay').style.display = 'none';
+      // document.getElementById('delay').style.display = 'none';
       document.getElementsByClassName('custom-radio')[0].style.display = 'none';
-      document.getElementById('delayNumber').style.display = 'block';
+      // document.getElementById('delayNumber').style.display = 'block';
       break;
     default:
       document.getElementsByClassName('custom-radio')[0].style.display = 'flex';
@@ -141,7 +160,7 @@ function swapIpa() {
   return swapType
 }
 
-document.getElementById('delayNumber').style.display = 'none';
+// document.getElementById('delayNumber').style.display = 'none';
 document.getElementById('vowels-btn').addEventListener('click', startIpa);
 document.getElementById('delay').addEventListener('change', getDelay);
 document.getElementById('shuffle').addEventListener('change', getShuffle);

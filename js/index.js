@@ -109,7 +109,7 @@ function runIpa(v, index, ipaLength) {
 }
 
 function getDelay() {
-  return parseInt(document.getElementById('delay').value) * 10000;
+  return parseInt(document.getElementById('delay').value) * 1000;
 
   // let swapDelay = swapIpa();
 

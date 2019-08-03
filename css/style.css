@@ -246,7 +246,8 @@ input.ipa-input:focus~label:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 100px;
+  /* font-size: 100px; */
+  font-size: 20vw;
 }
 
 .flip-card {
@@ -287,6 +288,12 @@ input.ipa-input:focus~label:before {
   color: white;
   transform: rotateY(180deg);
   z-index: 1;
+}
+
+/* Numbers */
+sup {
+  font-size: 8vw;
+  margin-top: -8vh;
 }
 
 /* Vowels Color pallete */
@@ -480,11 +487,11 @@ input.ipa-input:focus~label:before {
   content: 'End';
   display: block;
   position: absolute;
-  top: 35px;
-  right: 0;
+  top: 7px;
+  right: 6px;
   z-index: 2;
   background: #fff;
-  width: 100px;
+  width: 30px;
   transform: rotate(45deg);
 }
 

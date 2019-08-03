@@ -83,7 +83,7 @@ function runIpa(v, index, ipaLength) {
       document.getElementById("content").classList.add('end');
     }
 
-    var numberPrefix = parseInt(v);
+    var numberPrefix = parseInt(v.replace(',',''));
     var textPrefix = '';
 
     if(numberPrefix <= 100) {
